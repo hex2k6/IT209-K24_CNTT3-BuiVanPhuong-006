@@ -59,7 +59,7 @@ jobs:
           APP_VERSION: ${{ github.sha }}
         # TODO 1: build và khởi động toàn bộ hệ thống bằng Docker Compose (đọc student.env),
         #         chờ các service sẵn sàng (gợi ý: --wait --wait-timeout 300)
-        run: ______
+        run: student.evn
 
       - name: Smoke test
         run: |
@@ -78,7 +78,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
-          username: ______
+          username:
           password: ______
 
       - name: Push image lên GHCR
@@ -86,7 +86,6 @@ jobs:
           IMAGE: ${{ steps.meta.outputs.image }}
         # TODO 3: push image với 2 tag: commit SHA (github.sha) và latest
         run: |
-          ______
           ______
           ______
 
